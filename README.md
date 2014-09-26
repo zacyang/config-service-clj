@@ -1,10 +1,19 @@
 # config-service-clj
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library designed to provide configuration service in restful way.
 
 ## Usage
+### use maven 
+1.lein pom
+2.import project
 
-FIXME
+### run service
+1.start repl
+2.=> (use 'ring.adapter.jetty)
+  => (use 'hello-world.core)
+  => (run-jetty handler {:port 3000})
+
+
 
 ## License
 
