@@ -13,7 +13,8 @@ A Clojure library designed to provide configuration service in restful way.
   => (use 'hello-world.core)
   => (run-jetty handler {:port 3000})
 
-
+##TODO
+>add project to travis
 
 ## License
 
