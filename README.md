@@ -4,12 +4,12 @@ A Clojure library designed to provide configuration service in restful way.
 
 ## Usage
 ### use maven 
-1.lein pom
-2.import project
+>lein pom
+>import project
 
 ### run service
-1.start repl
-2.=> (use 'ring.adapter.jetty)
+>start repl
+>=> (use 'ring.adapter.jetty)
   => (use 'hello-world.core)
   => (run-jetty handler {:port 3000})
 
