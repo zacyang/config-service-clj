@@ -1,7 +1,13 @@
 (ns config-service-clj.core-test
-  (:require [clojure.test :refer :all]
-            [config-service-clj.core :refer :all]))
+  (:use [clojure.test :refer :all]
+        [config-service-clj.core :refer :all]
+        ring.mock.request))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (handler (= 0 1))))
+(deftest your-handler-test
+  (is (= (handler (request :get "/doc/10"))
+        {:status 200
+         :headers {"Content-Type" "text/html"}
+         :body "Hello World"})))
+
+(deftest test-debug
+  (is (= (+ 1 1) 2)))
