@@ -1,0 +1,13 @@
+language: clojure
+
+install: lein protobuf install; lein test;
+
+lein: lein2
+
+script: lein2 all test
+
+jdk:
+  - openjdk6
+  - openjdk7
+  - oraclejdk7
+  - oraclejdk8
