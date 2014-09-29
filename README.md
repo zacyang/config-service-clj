@@ -13,6 +13,13 @@ A Clojure library designed to provide configuration service in restful way.
   => (use 'hello-world.core)
   => (run-jetty handler {:port 3000})
 
+## Continuous Integration
+
+[![Continuous Integration status](https://secure.travis-ci.org/michaelklishin/neocons.png)](https://travis-ci.org/zacyang/config-service-clj)
+
+
+CI is hosted by [travis-ci.org](http://travis-ci.org)
+
 ##TODO
 >add project to travis
 
