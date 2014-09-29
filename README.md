@@ -15,7 +15,7 @@ A Clojure library designed to provide configuration service in restful way.
 
 ## Continuous Integration
 
-[![Continuous Integration status](https://secure.travis-ci.org/michaelklishin/neocons.png)](https://travis-ci.org/zacyang/config-service-clj)
+[![Continuous Integration status](https://travis-ci.org/zacyang/config-service-clj.svg?branch=master)](https://travis-ci.org/zacyang/config-service-clj)
 
 
 CI is hosted by [travis-ci.org](http://travis-ci.org)
