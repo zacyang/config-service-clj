@@ -7,8 +7,9 @@
                  [ring/ring-core "1.3.0"]
                  [ring/ring-jetty-adapter "1.3.0"]
                  [compojure "1.1.9"]
+                 [ring/ring-json "0.3.1"]
                  ]
   :plugins [[lein-ring "0.8.11"]]
-  :ring {:handler config-service-clj.core/handler}
+  :ring {:handler config_service_clj.handle/app}
   :profiles {:dev {:dependencies [[ring-mock "0.1.5"]]}}
   )
