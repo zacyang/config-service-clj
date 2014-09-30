@@ -1,10 +1,12 @@
 (ns config_service_clj.handle
-  (:use [config_service_clj.route :as route]
-        [ring.middleware.json :as middleware]
-        [compojure.handler :as handler]
-        ))
+  (:require [config_service_clj.route :as route]
+            [ring.middleware.json :as middleware]
+            [compojure.handler :as handler]
+            [ring.middleware.logger :as logger]
+            ))
 
 (def app
-  (-> (handler/site app-routes)
+  (-> (handler/site route/app-routes)
     (middleware/wrap-json-body)
-    (middleware/wrap-json-response)))
+    (middleware/wrap-json-response)
+    (logger/wrap-with-logger)))

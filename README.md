@@ -4,14 +4,14 @@ A Clojure library designed to provide configuration service in restful way.
 
 ## Usage
 ### use maven 
->lein pom
->import project
+ > lein pom
+ > import project
 
 ### run service
->start repl
->=> (use 'ring.adapter.jetty)
-  => (use 'hello-world.core)
-  => (run-jetty handler {:port 3000})
+ > start repl
+ > => (use 'ring.adapter.jetty)
+ > => (use 'hello-world.core)
+ > => (run-jetty handler {:port 3000})
 
 ## Continuous Integration
 
@@ -21,7 +21,9 @@ A Clojure library designed to provide configuration service in restful way.
 CI is hosted by [travis-ci.org](http://travis-ci.org)
 
 ##TODO
->add project to travis
+ - add couchDB
+ - add swagger support / swagger UI
+ - add json schema validation
 
 ## License
 
