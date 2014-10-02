@@ -12,11 +12,4 @@
     (middleware/wrap-json-body)
     (middleware/wrap-json-response)
     (logger/wrap-with-logger))
-  (swagger-ui/swagger-ui
-    "/swagger-ui"
-    :api-url "/swagger-docs")
-  (compojure.api.swagger/swagger-docs
-    "/swagger-docs"
-    :title "configuration service api"
-    :description "configuration service api")
   )
