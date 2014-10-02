@@ -1,7 +1,7 @@
 (ns config_service_clj.route
-  (:use [compojure.core]
-        [config_service_clj.config])
+  (:use [config_service_clj.config])
   (:require [compojure.route :as route]
+            [compojure.core :refer :all]
             ))
 
 
