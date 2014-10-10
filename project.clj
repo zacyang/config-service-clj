@@ -11,6 +11,7 @@
                  [ring.middleware.logger "0.5.0"]
                  [metosin/ring-swagger-ui "2.0.17"]
                  [metosin/ring-swagger "0.13.0"]
+                 [com.ashafa/clutch "0.4.0"]
                  ]
   :plugins [[lein-ring "0.8.11"]]
   :ring {:handler config_service_clj.handle/app}
