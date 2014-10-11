@@ -14,6 +14,6 @@
                  [com.ashafa/clutch "0.4.0"]
                  ]
   :plugins [[lein-ring "0.8.11"]]
-  :ring {:handler config_service_clj.handle/app}
+  :ring {:handler service.handle/app}
   :profiles {:dev {:dependencies [[ring-mock "0.1.5"]]}}
   )

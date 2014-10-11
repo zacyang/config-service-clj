@@ -1,6 +1,6 @@
 (ns
   ^{:author twer}
-  config_service_clj.log)
+  service.log)
 
 (defn logging [chain] (fn [req] (
                                   (println "before")

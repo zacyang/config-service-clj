@@ -1,8 +1,8 @@
 (ns
   ^{:author twer}
-  config_service_clj.repo-test
-  (:use [clojure.test :refer :all]
-        [config_service_clj.repo :as functions-under-test]))
+  service.test.repo
+  (:require [clojure.test :refer :all]
+            [service.repo :as functions-under-test]))
 
 (def document_id "document_id")
 (def document {:id "document_id"

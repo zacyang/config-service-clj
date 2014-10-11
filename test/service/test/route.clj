@@ -1,6 +1,6 @@
-(ns config_service_clj.route-test
+(ns service.test.route
   (:use [clojure.test :refer :all]
-        [config_service_clj.route :refer :all :as functions-under-test]
+        [service.route :refer :all :as functions-under-test]
         ring.mock.request))
 
 (deftest test-app-routes

@@ -1,11 +1,15 @@
-(ns config_service_clj.route
-  (:use [config_service_clj.config])
+(ns service.route
+  (:use [service.config])
   (:require [compojure.route :as route]
             [compojure.core :refer :all]
             ))
 
 
 (defroutes app-routes
+  ;;todo : add health restart shutdown hook
+  (context "/status" [] (defroutes status-routs)
+    (GET "/" [] (#(println "good")))
+    )
   (context "/configurations" [] (defroutes documents-routes
                                   (GET "/" [] (get-all-configurations))
                                   (POST "/" {body :body} (create-new-configuration body))

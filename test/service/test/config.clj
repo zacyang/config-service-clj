@@ -1,8 +1,8 @@
 (ns
   ^{:author yangyang}
-  config_service_clj.config-test
+  service.test.config
   (:use [clojure.test :refer :all]
-        [config_service_clj.config :refer :all]))
+        [service.config :refer :all]))
 
 (deftest should-beable-to-get-all-configurations
   (is (= (:body (get-all-configurations)) '{:document {:id "123"}})))

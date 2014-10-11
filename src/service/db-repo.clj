@@ -1,19 +1,9 @@
 (ns
-  ^{:author yangyang}
-  config_service_clj.repo
+  ^{:author twer}
+  service.db-repo
   (:require [com.ashafa.clutch :as clutch]))
 
-(defn add [x])
 
-(defn update [x])
-
-(defn delete [i])
-
-(defn get [i])
-
-;;todo : use multi-method to solve the dispatch stuff
-;;move this to seperate place
-;;todo : shall read db info from configuration
 (defn- open-db-connection []
   "open a data-base connection"
   (let [conn (doto
@@ -26,7 +16,7 @@
 
 (defn db [] @db-connection)
 
-(defn load-record
+(defn get-record
   [id]
   {:content (get-in (db) [id])})
 
@@ -35,5 +25,3 @@
   (let [id (get-in data ["_id"])]
     (clutch/assoc! (db) id data)
     {:content (get-in (db) [id])}))
-
-

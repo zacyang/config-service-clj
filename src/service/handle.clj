@@ -1,5 +1,5 @@
-(ns config_service_clj.handle
-  (:require [config_service_clj.route :as route]
+(ns service.handle
+  (:require [service.route :as route]
             [ring.middleware.json :as middleware]
             [compojure.handler :as handler]
             [ring.middleware.logger :as logger]
