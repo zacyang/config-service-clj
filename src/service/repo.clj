@@ -2,13 +2,17 @@
   ^{:author yangyang}
   service.repo)
 
-(defn add [x])
+(defn add [x]
+  (:id x))
 
-(defn update [x])
+(defn update [x]
+  x)
 
-(defn delete [i])
+(defn delete [i]
+  0)
 
-(defn get [i])
+(defn get [i]
+  {:document {:id "123"}})
 
 ;;todo : use multi-method to solve the dispatch stuff
 ;;move this to seperate place

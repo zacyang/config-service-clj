@@ -22,8 +22,11 @@ CI is hosted by [travis-ci.org](http://travis-ci.org)
 
 ##TODO
  - add couchDB
- - add swagger support / swagger UI
+ - [?] add swagger support / swagger UI
  - add json schema validation
+ - add athentication
+ - add user role, admin(r/w) role and dev(r) role
+ - spike on how to test database repo
 
 ## License
 
