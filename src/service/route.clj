@@ -2,13 +2,16 @@
   (:use [service.config])
   (:require [compojure.route :as route]
             [compojure.core :refer :all]
+            [cemerick.friend :as friend]
             ))
 
 
 (defroutes app-routes
   ;;todo : add health restart shutdown hook
-  (context "/status" [] (defroutes status-routs)
-    (GET "/" [] (#(println "good")))
+  (context "/status" [] (defroutes status-routes
+                          (friend/wrap-authorize status-routes #{::admin})
+                          (GET "/" [] (#(println "good"))))
+
     )
   (context "/configurations" [] (defroutes documents-routes
                                   (GET "/" [] (get-all-configurations))

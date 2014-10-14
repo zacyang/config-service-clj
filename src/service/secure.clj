@@ -10,12 +10,12 @@
   {
     "root" {
              :username "admin"
-             :password (creds/hash-bcrypt "admin_password")
+             :password (creds/hash-bcrypt "123")
              :roles #{::admin}
              }
     "dev" {
             :username "dev"
-            :password (creds/hash-bcrypt "dev_password")
+            :password (creds/hash-bcrypt "123")
             :roles #{::user}
             }})
 
@@ -23,4 +23,4 @@
   (friend/authenticate
     ring-app
     {:credential-fn (partial creds/bcrypt-credential-fn validate-uses)
-     :workflows [(workflows/interactive-form)]}))
+     :workflows [(workflows/http-basic)]}))

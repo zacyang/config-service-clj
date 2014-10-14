@@ -21,3 +21,5 @@
 
 (defn delete-configuration [id])
 
+(defn report-status [])
+
