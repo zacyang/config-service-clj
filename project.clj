@@ -11,8 +11,9 @@
                  [ring.middleware.logger "0.5.0"]
                  [com.ashafa/clutch "0.4.0"]
                  [com.cemerick/friend "0.2.1"]
+                 [ring-basic-authentication "1.0.5"]
                  ]
   :plugins [[lein-ring "0.8.11"]]
-  :ring {:handler service.handle/app}
+  :ring {:handler service.handle/secured-app}
   :profiles {:dev {:dependencies [[ring-mock "0.1.5"]]}}
   )
