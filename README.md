@@ -27,6 +27,7 @@ CI is hosted by [travis-ci.org](http://travis-ci.org)
  - add athentication
  - add user role, admin(r/w) role and dev(r) role
  - spike on how to test database repo
+ - make repo configurable , so that test can use it's own repo
 
 ## License
 
