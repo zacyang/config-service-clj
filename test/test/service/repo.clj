@@ -1,6 +1,6 @@
 (ns
   ^{:author twer}
-  service.test.repo
+  test.service.repo
   (:require [clojure.test :refer :all]
             [service.repo :as functions-under-test]))
 

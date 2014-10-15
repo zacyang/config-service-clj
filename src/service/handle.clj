@@ -6,7 +6,7 @@
             [ring.middleware.logger :as logger]
             ))
 
-(def app
+(def ^:private app
   (->
     (handler/site route/app-routes)
     (middleware/wrap-json-body)

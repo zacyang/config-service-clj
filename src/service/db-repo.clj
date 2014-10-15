@@ -5,16 +5,16 @@
 
 
 (defn- open-db-connection []
-  "open a data-base connection"
+  "Open a data-base connection."
   (let [conn (doto
                (clutch/couch "test")
                (clutch/create!))]
     conn)
   )
 
-(def ^{:private true} db-connection (delay (open-db-connection)))
+(def :private db-connection (delay (open-db-connection)))
 
-(defn db [] @db-connection)
+(defn- db [] @db-connection)
 
 (defn get-record
   [id]

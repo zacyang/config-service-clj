@@ -1,6 +1,6 @@
 (ns
   ^{:author yangyang}
-  service.config
+  service.handle.config
   (:require [ring.middleware.json :only [wrap-json-response]]
             [ring.util.response :only [response] :refer [response]])
   )
