@@ -2,7 +2,6 @@
   ^{:author yangyang}
   service.repo)
 
-(defmulti)
 (defn add [x]
   (:id x))
 
