@@ -15,9 +15,3 @@
   )
 
 
-;;todo : use multi-method to solve the dispatch stuff
-;;move this to seperate place
-;;todo : shall read db info from configuration
-
-
-
