@@ -1,8 +1,8 @@
 (ns
   ^{:author twer}
-  service.db-repo
+  service.db_repo
   (:require [com.ashafa.clutch :as clutch]
-            [service.repo [:only Repo]]))
+            [service.repo]))
 
 
 (defn- open-db-connection []
@@ -29,7 +29,7 @@
 
 (extend-protocol Repo
   DataBaseRepository
-  (add [^:db item]
+  (save-record [^:db item]
     "add item to the repo, result in item id"
     save-record [^:db item])
 
@@ -46,5 +46,3 @@
     "get item by item id, result in item itself or nil (not found)"
     (clutch/get-document db id))
   )
-
-(db)
