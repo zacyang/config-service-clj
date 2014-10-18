@@ -11,6 +11,5 @@
 
 (deftest should-get-add-item-to-repo
   (testing "get item by id"
-    (is (= (save-record memRepo {:id 1 :content "content"})))
-    (is (= (hello) "hello"))
+    (is (string? (save-record memRepo {:id 1 :content "content"})))
     ))
