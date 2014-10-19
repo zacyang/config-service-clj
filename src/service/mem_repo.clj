@@ -1,15 +1,17 @@
 (ns
   ^{:author yangyang}
   service.mem_repo
-  (:require [service.repo :refer :all]))
+  (:require [service.repo :refer :all]
+            [service.handle.config :refer :all])
+  (:import [service.handle.config ConfigurationRecord]))
 
-(def mem-repo {})
+(def mem-repo '())
 (defn generate-uuid [] (str (java.util.UUID/randomUUID)))
 (defrecord MemRepo [repo-name url username password]
   Repo
   (save-record [this item] "add item to the repo, result in item id"
     (def new-uuid (generate-uuid))
-    (conj mem-repo {:id new-uuid :content item})
+    (conj mem-repo (ConfigurationRecord. new-uuid "dev" "fist" "url"))
     new-uuid
     )
 
@@ -17,7 +19,11 @@
     (println item))
 
   (delete-record [this id] "delete item in repo, result in sucess(0) or not(1)"
-    (println id))
+    (if (or nil? empty? id)
+      1
+      (remove (#(= id (:id %))) mem-repo)
+      )
+    )
 
   (get-record [this id] "get item by item id, result in item itself or nil (not found)"
     (println id))

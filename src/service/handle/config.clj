@@ -5,6 +5,7 @@
             [ring.util.response :only [response] :refer [response]])
   )
 
+(defrecord ConfigurationRecord [id profile name value])
 (defn get-all-configurations
   []
   (response {:document {:id "123"}
