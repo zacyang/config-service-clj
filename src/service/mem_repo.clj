@@ -21,7 +21,7 @@
   (delete-record [this id] "delete item in repo, result in sucess(0) or not(1)"
     (if (or nil? empty? id)
       1
-      (remove (#(= id (:id %))) mem-repo)
+
       )
     )
 

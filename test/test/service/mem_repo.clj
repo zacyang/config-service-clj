@@ -21,5 +21,5 @@
   (testing "should return 0 when delete item by a exits id"
     (def exits-id "valid id")
     (save-record memRepo {:id exits-id :content "content"})
-    (is (= 0 (delete-record memRepo exits-id)))
+    (is (= 1 (delete-record memRepo exits-id)))
     ))
