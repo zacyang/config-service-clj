@@ -5,8 +5,11 @@
             [service.handle.config :refer :all])
   (:import [service.handle.config ConfigurationRecord]))
 
-(def mem-repo '())
-(defn generate-uuid [] (str (java.util.UUID/randomUUID)))
+(def ^:private mem-repo '())
+(defn- generate-uuid [] (str (java.util.UUID/randomUUID)))
+(defn- same-item? [x y]
+
+  )
 (defrecord MemRepo [repo-name url username password]
   Repo
   (save-record [this item] "add item to the repo, result in item id"
@@ -16,7 +19,12 @@
     )
 
   (update-record [this item] "update item in repo, result in new updated item id"
-    (println item))
+    (if-let [item-found (get-record this (:id item))]
+      (if (same-item? item-found item) (:id item)
+        false)
+      (save-record this item)
+      )
+    )
 
   (delete-record [this id] "delete item in repo, result in sucess(0) or not(1)"
     (if (or nil? empty? id)

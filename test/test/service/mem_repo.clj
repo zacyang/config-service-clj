@@ -8,11 +8,14 @@
   (:import [service.mem_repo MemRepo]))
 
 (def memRepo (MemRepo. "name" "url" "username" "password"))
-
+(def test-item {:id 1 :content "content"})
 (deftest should-get-add-item-to-repo-happy-pass
   (testing "get item by id"
-    (is (string? (save-record memRepo {:id 1 :content "content"})))
+    (is (string? (save-record memRepo test-item)))
     )
+
+  (testing "update item sucess, with new uuid in return"
+    (is (string? (update-record memRepo test-item))))
 
   )
 
