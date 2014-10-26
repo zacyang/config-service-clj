@@ -1,11 +1,11 @@
 (ns
   ^{:author twer}
-  test.service.mem_repo
-  (:require [service.mem_repo :refer :all]
-            [service.repo :refer :all]
+  test.service.repository.mem_repo
+  (:require [service.repository.mem_repo :refer :all]
+            [service.repository.repo :refer :all]
             [clojure.test :refer :all]
             )
-  (:import [service.mem_repo MemRepo]))
+  (:import [service.repository.mem_repo MemRepo]))
 
 (def memRepo (MemRepo. "name" "url" "username" "password"))
 (def test-item {:id 1 :content "content"})

@@ -1,8 +1,8 @@
 (ns
   ^{:author twer}
-  service.db_repo
+  service.repository.db_repo
   (:require [com.ashafa.clutch :as clutch]
-            [service.repo]))
+            [service.repository.repo]))
 
 
 (defn- open-db-connection []

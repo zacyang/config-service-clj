@@ -1,7 +1,7 @@
 (ns
   ^{:author yangyang}
-  service.mem_repo
-  (:require [service.repo :refer :all]
+  service.repository.mem_repo
+  (:require [service.repository.repo :refer :all]
             [service.handle.config :refer :all])
   (:import [service.handle.config ConfigurationRecord]))
 

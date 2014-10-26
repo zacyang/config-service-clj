@@ -1,6 +1,6 @@
 (ns
   ^{:author yangyang}
-  service.repo
+  service.repository.repo
   )
 
 (defprotocol Repo
