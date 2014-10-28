@@ -17,6 +17,9 @@
   (testing "update item sucess, with new uuid in return"
     (is (string? (update-record memRepo test-item))))
 
+  (testing "delete item sucess, with exists uuid"
+    (is (= 0 (delete-record memRepo "non-exist-id")))
+    )
   )
 
 (deftest should-get-error-return-when-opt-invalid-input
