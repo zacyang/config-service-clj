@@ -14,5 +14,6 @@
                  ]
   :plugins [[lein-ring "0.8.11"]]
   :ring {:handler service.handle/secured-app}
-  :profiles {:dev {:dependencies [[ring-mock "0.1.5"]]}}
+  :profiles {:dev {:dependencies [[ring-mock "0.1.5"]] :plugins [[cider/cider-nrepl "0.8.1"]]}}
+
   )
